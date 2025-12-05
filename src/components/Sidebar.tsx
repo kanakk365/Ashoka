@@ -67,7 +67,13 @@ export function Sidebar() {
   return (
     <div className="w-64 h-screen bg-white border-r border-gray-100 flex flex-col fixed left-0 top-0 z-20">
       <div className="p-8">
-        <h1 className="text-2xl font-bold text-[#009C5B]">LOGO</h1>
+        <div className="relative w-40 h-12">
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="object-contain w-full h-full"
+          />
+        </div>
       </div>
 
       <nav className="flex-1 px-4 space-y-2">
@@ -107,7 +113,7 @@ export function Sidebar() {
           </div>
           <div className="flex-1">
             <p className="text-xs text-gray-400">Welcome 👋</p>
-            <p className="text-sm font-bold text-gray-900">Ken</p>
+            <p className="text-sm font-bold text-gray-900">Ashoka</p>
           </div>
           <ChevronRight size={16} className="text-gray-400" />
         </div>
