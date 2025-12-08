@@ -50,15 +50,15 @@ const vehiclesData = [
   {
     id: "AD1245",
     reg: "MHA12321",
-    brand: "Honda",
-    branch: "Mumbai , Sp Road..",
+    brand: "Yamaha",
+    branch: "Hyderabad , Sp Road..",
     action: "View",
   },
   {
     id: "AD1245",
     reg: "MHA12321",
-    brand: "Honda",
-    branch: "Mumbai , Sp Road..",
+    brand: "Yamaha",
+    branch: "Hyderabad , Sp Road..",
     action: "View",
   },
 ];
@@ -205,7 +205,7 @@ export function VehicleOperations() {
                       {vehicle.branch}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right">
-                      <button 
+                      <button
                         onClick={() => setIsModalOpen(true)}
                         className="px-6 py-1.5 bg-gradient-to-r from-[#009B9B] to-[#009C5B] text-white text-xs rounded-full hover:opacity-90 transition-opacity"
                       >
