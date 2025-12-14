@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
+import { useAuthStore } from "@/store/authStore";
 import {
   LayoutDashboard,
   Tags,
@@ -12,6 +13,7 @@ import {
   Briefcase,
   BarChart3,
   ChevronRight,
+  LogOut,
 } from "lucide-react";
 
 const menuItems = [
@@ -63,6 +65,8 @@ export function Sidebar() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const fromParam = searchParams.get("from");
+  const [showLogout, setShowLogout] = useState(false);
+  const { logout } = useAuthStore();
 
   return (
     <div className="w-64 h-screen bg-white border-r border-gray-100 flex flex-col fixed left-0 top-0 z-20">
@@ -106,8 +110,22 @@ export function Sidebar() {
         })}
       </nav>
 
-      <div className="p-4 border-t border-gray-100">
-        <div className="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
+      <div className="relative p-4 border-t border-gray-100">
+        {showLogout && (
+          <div className="absolute bottom-full left-4 right-4 mb-2 bg-white rounded-xl shadow-lg border border-gray-100 p-2 animate-in slide-in-from-bottom-2">
+            <button
+              onClick={() => logout()}
+              className="w-full flex items-center gap-2 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            >
+              <LogOut size={18} />
+              <span className="font-medium text-sm">Log Out</span>
+            </button>
+          </div>
+        )}
+        <div
+          onClick={() => setShowLogout(!showLogout)}
+          className="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors"
+        >
           <div className="w-10 h-10 rounded bg-[#E33424] flex items-center justify-center text-white font-bold">
             K
           </div>
@@ -115,7 +133,10 @@ export function Sidebar() {
             <p className="text-xs text-gray-400">Welcome 👋</p>
             <p className="text-sm font-bold text-gray-900">Ashoka</p>
           </div>
-          <ChevronRight size={16} className="text-gray-400" />
+          <ChevronRight
+            size={16}
+            className={`text-gray-400 transition-transform ${showLogout ? "rotate-90" : ""}`}
+          />
         </div>
       </div>
     </div>
