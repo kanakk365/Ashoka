@@ -30,7 +30,7 @@ const menuItems = [
   {
     name: "Branches",
     icon: MapPin,
-    href: "/dashboard/coming-soon?from=branches",
+    href: "/dashboard/branches",
     id: "branches",
   },
   {
@@ -80,6 +80,7 @@ export function Sidebar() {
         {menuItems.map((item) => {
           const isActive =
             pathname === item.href ||
+            (pathname.startsWith(item.href) && item.href !== "/dashboard") ||
             (pathname === "/dashboard/coming-soon" && fromParam === item.id);
           return (
             <Link
@@ -88,16 +89,15 @@ export function Sidebar() {
               style={
                 isActive
                   ? {
-                      background:
-                        "linear-gradient(90deg, #009C5B 0%, #009B9B 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))",
-                    }
+                    background:
+                      "linear-gradient(92.57deg, #E33424 -11.84%, #C00F00 100.76%)",
+                  }
                   : undefined
               }
-              className={` cursor-pointer flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
-                isActive
-                  ? "text-white"
-                  : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
-              }`}
+              className={` cursor-pointer flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${isActive
+                ? "text-white"
+                : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+                }`}
             >
               <item.icon size={20} />
               <span className="font-medium">{item.name}</span>
@@ -108,7 +108,7 @@ export function Sidebar() {
 
       <div className="p-4 border-t border-gray-100">
         <div className="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
-          <div className="w-10 h-10 rounded bg-[#009C5B] flex items-center justify-center text-white font-bold">
+          <div className="w-10 h-10 rounded bg-[#E33424] flex items-center justify-center text-white font-bold">
             K
           </div>
           <div className="flex-1">

@@ -30,7 +30,7 @@ export function ComingSoonModal({ isOpen, onClose }: ComingSoonModalProps) {
 
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-20 h-20 mx-auto bg-gradient-to-r from-[#009B9B] to-[#009C5B] rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto bg-gradient-to-r from-[#E33424] to-[#C00F00] rounded-full flex items-center justify-center">
               <svg
                 className="w-10 h-10 text-white"
                 fill="none"
@@ -57,7 +57,7 @@ export function ComingSoonModal({ isOpen, onClose }: ComingSoonModalProps) {
 
           <button
             onClick={onClose}
-            className="w-full px-6 py-3 bg-gradient-to-r from-[#009B9B] to-[#009C5B] text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
+            className="w-full px-6 py-3 bg-gradient-to-r from-[#E33424] to-[#C00F00] text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
           >
             Got it
           </button>

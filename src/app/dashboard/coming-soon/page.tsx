@@ -6,7 +6,7 @@ export default function ComingSoonPage() {
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
         <div className="mb-8">
-          <div className="w-24 h-24 mx-auto bg-gradient-to-r from-[#009B9B] to-[#009C5B] rounded-full flex items-center justify-center mb-6">
+          <div className="w-24 h-24 mx-auto bg-gradient-to-r from-[#E33424] to-[#C00F00] rounded-full flex items-center justify-center mb-6">
             <svg
               className="w-12 h-12 text-white"
               fill="none"
@@ -32,7 +32,7 @@ export default function ComingSoonPage() {
 
           <Link
             href="/dashboard"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-[#009B9B] to-[#009C5B] text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-[#E33424] to-[#C00F00] text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
           >
             Back to Dashboard
           </Link>

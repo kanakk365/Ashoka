@@ -20,9 +20,9 @@ import { ComingSoonModal } from "@/components/ComingSoonModal";
 
 // Mock Data
 const onboardedData = [
-  { name: "Daily", value: 160, fill: "#009B9B" },
-  { name: "Weekly", value: 420, fill: "#009C5B" },
-  { name: "Monthly", value: 310, fill: "#666666" },
+  { name: "Daily", value: 160, fill: "#e25549" },
+  { name: "Weekly", value: 420, fill: "#1d3b5a" },
+  { name: "Monthly", value: 310, fill: "#6c6c6c" },
 ];
 
 const trendData = [
@@ -40,9 +40,9 @@ const trendData = [
 ];
 
 const jobStatusData = [
-  { name: "In progress", value: 30, color: "#009B9B" },
-  { name: "Pending", value: 20, color: "#009C5B" },
-  { name: "Completed", value: 40, color: "#00D1D1" },
+  { name: "In progress", value: 30, color: "#e25549" },
+  { name: "Pending", value: 20, color: "#1d3b5a" },
+  { name: "Completed", value: 40, color: "#e25549" },
   { name: "Delivered", value: 10, color: "#000000" },
 ];
 
@@ -157,7 +157,7 @@ export function VehicleOperations() {
                   <Line
                     type="monotone"
                     dataKey="value"
-                    stroke="#009B9B"
+                    stroke="#e25549"
                     strokeWidth={2}
                     dot={false}
                   />
@@ -173,7 +173,7 @@ export function VehicleOperations() {
             <h3 className="font-bold text-gray-900">Vehicles table</h3>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="px-4 py-1.5 bg-gradient-to-r from-[#009B9B] to-[#009C5B] text-white text-sm rounded-lg hover:opacity-90 transition-opacity"
+              className="px-4 py-1.5 bg-gradient-to-r from-[#E33424] to-[#C00F00] text-white text-sm rounded-lg hover:opacity-90 transition-opacity"
             >
               View all
             </button>
@@ -207,7 +207,7 @@ export function VehicleOperations() {
                     <td className="px-6 py-4 whitespace-nowrap text-right">
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className="px-6 py-1.5 bg-gradient-to-r from-[#009B9B] to-[#009C5B] text-white text-xs rounded-full hover:opacity-90 transition-opacity"
+                        className="px-6 py-1.5 bg-gradient-to-r from-[#E33424] to-[#C00F00] text-white text-xs rounded-full hover:opacity-90 transition-opacity"
                       >
                         View
                       </button>
@@ -269,7 +269,7 @@ export function VehicleOperations() {
           {/* Due Date / Delivery Date */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <div className="flex gap-6 border-b border-gray-100 mb-6">
-              <button className="pb-2 text-sm font-bold text-gray-900 border-b-2 border-[#009C5B]">
+              <button className="pb-2 text-sm font-bold text-gray-900 border-b-2 border-[#E33424]">
                 Due Date
               </button>
               <button className="pb-2 text-sm font-medium text-gray-400 hover:text-gray-600">

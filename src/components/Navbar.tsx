@@ -15,7 +15,7 @@ export function Navbar() {
           <input
             type="text"
             placeholder="Search"
-            className="pl-10 pr-4 py-2 bg-gray-50 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#009C5B]/20 w-64"
+            className="pl-10 pr-4 py-2 bg-gray-50 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#E33424]/20 w-64"
           />
         </div>
 
@@ -26,7 +26,7 @@ export function Navbar() {
           </span>
         </button>
 
-        <div className="w-8 h-8 rounded bg-[#009C5B] flex items-center justify-center text-white text-sm font-bold">
+        <div className="w-8 h-8 rounded bg-[#E33424] flex items-center justify-center text-white text-sm font-bold">
           K
         </div>
       </div>
